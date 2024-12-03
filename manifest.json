@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome sahayaka",
+    "version": "1.1.1",
+    "description": "Experimental Chrome extension using Chrome's built-in Gemini Nano LLM for generating summaries of selected text.",
+    "permissions": ["contextMenus", "sidePanel", "storage"],
+    "background": {
+        "service_worker": "service_worker.js"
+    },
+    "icons": {
+        "16": "images/suryaprabha",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png",
+        "512": "images/icon-512.png"
+    },
+    "homepage_url": "https://github.com/vinayak1729-web/Chrome_Sahayaka",
+    "side_panel": {
+        "default_path": "/aiLearner/index.html"
+    },
+    "minimum_chrome_version": "132"
+}
