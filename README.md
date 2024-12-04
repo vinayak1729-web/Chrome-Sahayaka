@@ -1,6 +1,6 @@
-<div align="center">
-# 🚀 **ChromeSAHAYAK** - Your Personal AI Tutor & Fun Zone Extension 🌟
 
+# 🚀 **ChromeSAHAYAK** - Your Personal AI Tutor & Fun Zone Extension 🌟
+<div align="center">
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)  
 ![Chrome](https://img.shields.io/badge/Chrome--Dev%2FCanary-v128.0.6545.0%2B-green.svg)  
