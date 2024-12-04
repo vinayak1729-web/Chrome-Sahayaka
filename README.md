@@ -1,4 +1,4 @@
-
+<div align="center">
 # 🚀 **ChromeSAHAYAK** - Your Personal AI Tutor & Fun Zone Extension 🌟
 
 
