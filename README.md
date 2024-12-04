@@ -2,13 +2,17 @@
 # 🚀 **ChromeSAHAYAK** - Your Personal AI Tutor & Fun Zone Extension 🌟
 <div align="center">
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)  
-![Chrome](https://img.shields.io/badge/Chrome--Dev%2FCanary-v128.0.6545.0%2B-green.svg)  
-![Platform](https://img.shields.io/badge/platform-Windows%20|%20MacOS%20|%20Linux-lightgrey)  
-![Status](https://img.shields.io/badge/status-beta-orange)  
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Chrome](https://img.shields.io/badge/Chrome--Dev%2FCanary-v128.0.6545.0%2B-green.svg)
+![Platform](https://img.shields.io/badge/platform-Windows%20|%20MacOS%20|%20Linux-lightgrey)
+![Status](https://img.shields.io/badge/status-beta-orange)
+
 
 
 > ⚠️ **Important**: This extension requires Chrome Dev or Canary channel (≥ 128.0.6545.0) to function properly.
+
+</div>
+
 
 
 **ChromeSAHAYAK** is a web app and Chrome extension that transforms learning and entertainment. Powered by cutting-edge AI technologies like Prompt API and Speech Recognition, it offers personalized tutoring, hands-free browsing, interactive games, and mental health support. 🎓🎉  
