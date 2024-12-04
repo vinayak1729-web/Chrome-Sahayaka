@@ -6,402 +6,325 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChromeSahayak - Your Learning Companion</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
-         body {
+        body {
             font-family: 'Poppins', sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: transparent; /* Changed from 'none' to 'transparent' */
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        .header {
+
+        .navbar {
+            width: 100%;
             background-color: #3498db;
             color: white;
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
+            padding: 10px 20px;
+        }
+
+        .navbar h1 {
+            margin: 0;
             font-size: 1.5em;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #1f6fb2;
+            transform: scale(1.05);
+        }
+
+        .sidebar select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: none;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 30px;
+        }
+
+        .header {
+            background: linear-gradient(to right, #9b22a4, #d13bff);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.5em;
         }
 
         .learning-section {
-            background:transparent;
+            background-color: white;
+            padding: 20px;
             border-radius: 10px;
-            padding: 25px;
-           
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         .input-container {
             display: flex;
-            margin-bottom: 20px;
             gap: 10px;
-            align-items: center;
-            justify-content: center;
+            margin-bottom: 20px;
         }
 
         #questionInput {
             flex-grow: 1;
-            padding: 12px;
-            border: 2px solid #3498db;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-        }
-
-        #questionInput:focus {
-            border-color: #2980b9;
-            box-shadow: 0 0 10px rgba(52, 152, 219, 0.6);
-        }
-
-        .dropdown,
-        #languageInput {
-            padding: 12px;
-            font-size: 1.1em;
-            border: 2px solid #3498db;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            background-color: #ffffff;
-        }
-
-        .dropdown:hover,
-        #languageInput:hover {
-            border-color: #2980b9;
-            box-shadow: 0 0 12px rgba(52, 152, 219, 0.6);
         }
 
         #askButton {
-            padding: 12px 24px;
-            background: linear-gradient(45deg, #3498db, #2980b9);
+            padding: 10px 20px;
+            background-color: #3498db;
             color: white;
             border: none;
-            align-self: center;
-            margin-left: auto;
-            margin-right: auto;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            width: 70%;
+            font-size: 1em;
+            transition: all 0.3s ease;
         }
 
         #askButton:hover {
-            background: linear-gradient(45deg, #2980b9, #3498db);
-            transform: translateY(-3px);
+            background-color: #2980b9;
         }
 
         #answerOutput {
-            background-color: #f9f9f9;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
             padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            min-height: 150px;
+            /* Minimum height */
+            max-height: 300px;
+            /* Fixed height */
+            overflow-y: auto;
+            /* Enables vertical scrolling */
             margin-bottom: 20px;
-            min-height: 100px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            font-size: 1em;
+            /* Adjust font size */
+            line-height: 1.5;
+            /* Improves readability */
+            word-wrap: break-word;
+            /* Ensures long words break to fit within the box */
         }
+
 
         .action-buttons {
             display: flex;
-            justify-content: space-between;
             gap: 10px;
-        }
-        .dropdownn_featurs {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .dropdown-container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .dropdown-label {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 1rem;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .dropdown {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-            background-repeat: no-repeat;
-            background-position-x: 100%;
-            background-position-y: 50%;
-            background-color: white;
         }
 
         .action-buttons button {
             flex-grow: 1;
-            padding: 12px;
+            padding: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            background: linear-gradient(45deg, #3498db, #2980b9);
+            background-color: #3498db;
             color: white;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1em;
+            transition: all 0.3s ease;
         }
 
         .action-buttons button:hover {
-            background: linear-gradient(45deg, #2980b9, #3498db);
-            transform: translateY(-3px);
+            background-color: #2980b9;
         }
 
-        label {
-            font-size: 1.1em;
-            font-weight: bold;
-            margin-bottom: 10px;
+        /* Footer Styling */
+        .footer {
+            background-color: #fff;
+            /* White background */
             color: #333;
+            /* Dark text color */
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e1e1e1;
+            /* Subtle border at the top */
         }
 
-        select,
-        .dropdown {
-            font-size: 1.1em;
-            border-radius: 8px;
-            border: 2px solid #3498db;
-            padding: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            width: 100%;
-            background-color: #ffffff;
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 15px;
         }
 
-        select:hover,
-        .dropdown:hover {
-            border-color: #2980b9;
-            box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+        /* Logo Styling */
+        .footer-logo .logo-img {
+            width: 40px;
+            /* Logo size */
+            height: 40px;
+            border-radius: 50%;
+            /* Circle for logo */
+            object-fit: cover;
+            margin-right: 10px;
+            /* Space between logo and text */
         }
 
-        select:focus,
-        .dropdown:focus {
-            border-color: #2980b9;
-            box-shadow: 0 0 12px rgba(52, 152, 219, 0.6);
+        /* Text Styling */
+        .footer-text p {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0;
         }
 
-        #askButton {
-            animation: pulse 2s infinite;
-            margin: auto;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        #rewriteButton {
-            margin-top: 20px;
-            width: 100%;
-            padding: 12px;
-            background-color: #f39c12;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
-
-        #rewriteButton:hover {
-            background-color: #e67e22;
-        }
-
-        #rewritediv {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .rewrite input {
-            width: 100%;
-            padding: 12px;
-            font-size: 1.1em;
-            border-radius: 5px;
-            border: 2px solid #3498db;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: border-color 0.3s ease;
-        }
-
-        .rewrite select {
-            font-size: 1.1em;
-            border-radius: 5px;
-            border: 2px solid #3498db;
-            padding: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        #answerOutput h1 {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.5em;
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 0.3em;
-        }
-
-        #answerOutput h2 {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #333;
-            margin-top: 1em;
-            margin-bottom: 0.5em;
-        }
-
-        #answerOutput h3 {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #333;
-        }
-
-        #answerOutput strong {
-            font-weight: bold;
-            color: #000;
-        }
-
-        #answerOutput p {
-            margin-bottom: 1em;
-            line-height: 1.6;
-        }
-
-        #answerOutput ul,
-        #answerOutput ol {
-            margin-bottom: 1em;
-            padding-left: 2em;
-        }
-
-        #answerOutput li {
-            margin-bottom: 0.5em;
-        }
-
-        #answerOutput blockquote {
-            border-left: 4px solid #dfe2e5;
-            padding-left: 1em;
-            color: #6a737d;
-            margin-bottom: 1em;
-        }
-        .learning-section{
-            background: transparent;
+        .footer-text .emoji {
+            font-size: 20px;
+            /* Adjust emoji size */
+            margin-left: 5px;
+            /* Add a small gap between text and emoji */
         }
     </style>
 
-    </style>
 </head>
 
 <body>
-    <div class="header">
-        ChromeSahayak: Your Learning Companion 📚
+    <div class="navbar">
+        <h1>ChromeSahayak</h1>
+        <a href="/Chrome-Sahayaka/index.html">Home</a>
     </div>
-    <div class="dropdownn_featurs">
-    <label for="difficulty-main" class="block text-lg font-semibold mb-2">Difficulty Level <span>🎓</span></label>
-    <select id="difficulty" class="dropdown">
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-    </select>
-    <label for="length" class="block text-lg font-semibold mb-2">Length <span>📏</span></label>
-    <select id="length" class="dropdown">
-        <option value="small">small</option>
-        <option value="medium">medium</option>
-        <option value="large">large</option>
-    </select>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>🌟 Our Features</h2>
+            <a href="/Chrome-Sahayaka/mag_ai_voice_assistant/index.html">🗣️ Talk to MAG</a>
+            <h2>⚙️ Options</h2>
+            <label for="difficulty">🎯 Difficulty Level</label>
+            <select id="difficulty">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <label for="length">⏳ Lesson Length</label>
+            <select id="length">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                Your Learning Companion 📚
+            </div>
+
+            <div class="learning-section">
+                <h2>What do you want to learn today? 🤔</h2>
+                <div class="input-container">
+                    <input type="text" id="questionInput" placeholder="Enter your learning topic here...">
+                    <button id="askButton">Let's Study ✍️</button>
+                </div>
+                <div id="answerOutput">Your learning material will appear here...</div>
+
+                <div class="action-buttons">
+                    <button id="saveButton">Save to PDF 💾</button>
+                    <button id="audioButton">Convert to Lesson 🎧</button>
+                    <button id="SaudioButton">Start Audio Lesson 🎤</button>
+                    <button id="stopAudioButton">Stop Audio Lesson ⛔</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="learning-section">
-        <h2>What do you want to learn today? 🤔</h2>
-
-        <div class="input-container" style="text-align: center; margin-left: auto;margin-right: auto;">
-            <input type="text" style="align-items: center; text-align: center;" id="questionInput"
-                placeholder="Enter your learning topic here...">
-
-
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/images/suryaprabha.jpeg" alt="Gemini Logo" class="logo-img" />
+            </div>
+            <div class="footer-text">
+                <p>Made with Google Chrome Prompt API, by Team Surya Prabha <span class="emoji">💪</span></p>
+            </div>
         </div>
-        <br>
-        <div class="askbutton">
-            <button id="askButton" style="align-items: center; text-align: center;">Let's Study✍️</button>
-        </div>
+    </footer>
 
-        <p id="answerOutput" placeholder="Your learning material will appear here..."></>
-        <div class="action-buttons">
 
-            <button id="saveButton">Save on Device 💾</button>
-            <button id="audioButton">Convert to Lesson</button>
-            <button id="SaudioButton">Start audio Lesson 🎧</button>
-            <button id="stopAudioButton">Stop audio Lesson⛔ </button>
-        </div>
-        <br><br>
+    <script src="ai_teacher.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        let answerOutput = document.getElementById("answerOutput");
+        let saveButton = document.getElementById("saveButton");
+        let audioButton = document.getElementById("audioButton");
+        let SaudioButton = document.getElementById("SaudioButton");
+        let stopAudioButton = document.getElementById("stopAudioButton");
 
-        <script src="ai_teacher.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-        <script>
-            let answerOutput = document.getElementById("answerOutput");
-            let saveButton = document.getElementById("saveButton");
-            let audioButton = document.getElementById("audioButton");
-            let SaudioButton = document.getElementById("SaudioButton");
-            let stopAudioButton = document.getElementById("stopAudioButton");
+        // Simulate a response in answerOutput
+        document.getElementById("askButton").addEventListener("click", function () {
+            answerOutput.innerText = "thinking...!"; //make a animation of thinking 
+        });
 
-            // Simulate a response in answerOutput
-            document.getElementById("askButton").addEventListener("click", function () {
-                answerOutput.innerText = "thinking...!"; //make a animation of thinking 
-            });
+        // Save content to file
+        saveButton.addEventListener("click", function () {
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+            const textToSave = answerOutput.innerText;
 
-            // Save content to file
-            saveButton.addEventListener("click", function () {
-                const textToSave = answerOutput.innerText;
-                const blob = new Blob([textToSave], { type: "text/plain" });
-                const link = document.createElement("a");
-                link.href = URL.createObjectURL(blob);
-                link.download = "learning_material.txt";
-                link.click();
-            });
+            pdf.text(textToSave, 10, 10);
+            pdf.save("learning_material.pdf");
+        });
 
-            // Convert text to speech
-            let speechSynthesisInstance = null;
-            SaudioButton.addEventListener("click", function () {
-                const text = answerOutput.innerText;
-                if (speechSynthesis.speaking) {
-                    speechSynthesis.cancel(); // Stop any ongoing speech
-                }
-                speechSynthesisInstance = new SpeechSynthesisUtterance(text);
-                speechSynthesis.speak(speechSynthesisInstance);
-            });
+        // Convert text to speech
+        let speechSynthesisInstance = null;
+        SaudioButton.addEventListener("click", function () {
+            const text = answerOutput.innerText;
+            if (speechSynthesis.speaking) {
+                speechSynthesis.cancel(); // Stop any ongoing speech
+            }
+            speechSynthesisInstance = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(speechSynthesisInstance);
+        });
 
-            // Stop the audio
-            stopAudioButton.addEventListener("click", function () {
-                if (speechSynthesisInstance) {
-                    speechSynthesis.cancel(); // Stop the current speech
-                }
-            });
-        </script>
+        // Stop the audio
+        stopAudioButton.addEventListener("click", function () {
+            if (speechSynthesisInstance) {
+                speechSynthesis.cancel(); // Stop the current speech
+            }
+        });
+    </script>
 
 </body>
 
