@@ -1,7 +1,7 @@
 
-# 🚀 **AI Learner** - Your Personal AI Tutor & Fun Zone Extension 🌟  
+# 🚀 **ChromeSAHAYAK** - Your Personal AI Tutor & Fun Zone Extension 🌟  
 
-**AI Learner** is a Chrome extension that brings learning and entertainment to your fingertips! Using Chrome's built-in AI APIs like Prompt API, Speech Recognition, and more, this extension is your go-to AI tutor, voice assistant, YouTube transcriber, and creative buddy—all in one! 🎓🎉  
+**ChromeSAHAYAK** is a Chrome extension that brings learning and entertainment to your fingertips! Using Chrome's built-in AI APIs like Prompt API, Speech Recognition, and more, this extension is your go-to AI tutor, voice assistant, YouTube transcriber, and creative buddy—all in one! 🎓🎉  
 
 ---
 
