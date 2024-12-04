@@ -85,6 +85,67 @@ Enable the following Chrome flags:
 
 ---
 
+## 🔧 **Built-in AI Model (Gemini Nano) Setup**  
+
+### **Step 1: Model Initialization**  
+1. Open the [Prompt API Playground](https://chrome.dev/web-ai-demos/prompt-api-playground/).  
+2. Launch the **DevTools Console** (`F12`).  
+3. Execute:  
+   ```javascript
+   (await ai.languageModel.capabilities()).available;
+   ```  
+4. If the return value is `"after-download"`:  
+   - Go to **chrome://components**.  
+   - Verify **Optimization Guide On Device Model** version ≥ 2024.5.21.1031.  
+   - If outdated, click **"Check for update"**.  
+
+5. If the return value is `"no"`:  
+   - Run in the Console:  
+     ```javascript
+     await ai.languageModel.create();
+     ```  
+   - If it fails (expected), relaunch Chrome and retry the earlier command.  
+
+---
+
+### **Step 2: Verify Gemini Nano**  
+1. Execute in **DevTools Console**:  
+   ```javascript
+   (await ai.languageModel.capabilities()).available;
+   ```  
+2. Ensure return value is `"after-download"`.  
+3. Confirm **Optimization Guide On Device Model** is updated under `chrome://components`.  
+
+---
+
+## 🏁 **How to Run the Code**  
+
+### **Clone the Repository**  
+1. Open your terminal or command prompt.  
+2. Run:  
+   ```bash
+   git clone https://github.com/vinayak1729-web/Chrome-Sahayaka.git
+   ```  
+
+### **Launch the Application**  
+1. Navigate to the project directory:  
+   ```bash
+   cd Chrome-Sahayaka
+   ```  
+2. Open `index.html` in your browser:  
+   - Double-click on the `index.html` file.  
+   - Or, right-click > "Open with..." > Select Chrome.  
+
+### **Start Exploring**  
+Enjoy exploring the interactive features like AI tutoring, Fun Zone, and mental health support.  
+
+--- 
+
+**Important:** After modifying Chrome flags, **restart Chrome** to ensure settings are activated correctly.  
+
+--- 
+
+
 ## 🧰 **APIs and Technologies Used**  
 
 - **Chrome AI APIs**:  
