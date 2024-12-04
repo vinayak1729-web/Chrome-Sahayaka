@@ -201,7 +201,8 @@ We ❤️ contributions! Help us improve by:
 
 ## 👩‍💻 **Developers & Credits**  
 
-Developed with 💖 by [Vinayak Shinde](https://github.com/vinayak1729-web), [Vishal Mishra](https://github.com/vishalmishra369), and [Chelsea Singla](https://github.com/Chelseasingla1).  
+Developed with 💖 by [Vinayak Shinde](https://github.com/vinayak1729-web), [Vishal Mishra](https://github.com/vishalmishra369),  [Chelsea Singla](https://github.com/Chelseasingla1),
+and [Swasthika Devadiga](https://github.com/SwasthikaDev).
 
 📫 **Contact**: Have questions? Drop an issue in the repo!  
 
