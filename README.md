@@ -19,6 +19,88 @@
 
 ---
 
+## Images
+
+Feel free to adjust links or commands based on your actual repository details.
+
+1. Clone the repository:
+    
+    ```bash
+    git clone <https://github.com/your-repo/ai-learner.git>
+    
+    ```
+    
+
+## Get Started
+
+## License
+
+3. Start the application:
+    
+    ```bash
+    npm start
+    
+    ```
+    
+
+## Contributing
+
+### **1. Ask the AI Learner**
+
+Engage directly with the AI Learner by asking questions or seeking information. The intelligent system provides accurate, tailored responses to enhance your understanding of complex topics.
+<br>
+
+https://github.com/user-attachments/assets/f4d71af8-9134-4d7b-89c4-3f1c8d93c5fc
+
+---
+
+---
+
+We welcome contributions to make AI Learner even better! Feel free to fork the repository, create feature branches, and submit pull requests.
+
+---
+
+This project is licensed under the [MIT License](https://www.notion.so/LICENSE).
+
+2. Install dependencies:
+    
+    ```bash
+    npm install
+    
+    ```
+    
+
+---
+
+### **2. Lesson Conversion**
+
+Simplify learning with AI Learner’s lesson conversion feature. It breaks down complex topics into structured, digestible lessons, making it easier for users to grasp even the most challenging concepts.
+<br>
+
+https://github.com/user-attachments/assets/35ce5f0e-3d27-425a-9fcd-edd56d2fa027
+
+---
+
+### **3. AI Voice Assistant Emotion Detection**
+
+Leverage the AI voice assistant’s ability to detect emotions during interactions. By understanding the user’s emotional state, AI Learner adapts its responses to provide a supportive and empathetic learning experience.
+<br>
+
+https://github.com/user-attachments/assets/179f364f-2b61-4f01-890f-eeb4e3153c5e
+
+---
+
+### **4. AI Voice Assistant for Learning**
+
+Experience hands-free learning with the AI voice assistant. It offers seamless voice-based navigation, personalized suggestions, and interactive support, ensuring a convenient and user-friendly educational journey.
+<br>
+
+https://github.com/user-attachments/assets/1f35dc15-29e4-462d-988b-453f4449f7e4
+
+---
+
+---
+
 ## ✨ **Key Features**  
 
 ### 🌐 **1. AI-Powered Learning**  
