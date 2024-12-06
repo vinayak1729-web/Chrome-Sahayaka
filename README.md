@@ -19,6 +19,48 @@
 
 ---
 
+## Images
+
+### **1. Ask the AI Learner**
+
+Engage directly with the AI Learner by asking questions or seeking information. The intelligent system provides accurate, tailored responses to enhance your understanding of complex topics.
+<br>
+
+<img width="958" alt="ai_learner_ask" src="https://github.com/user-attachments/assets/ce477ebb-c3b5-4a52-8ca6-961b511a1cee">
+
+---
+
+### **2. Lesson Conversion**
+
+Simplify learning with AI Learner’s lesson conversion feature. It breaks down complex topics into structured, digestible lessons, making it easier for users to grasp even the most challenging concepts.
+<br>
+
+<img width="959" alt="ai_learner_convert_to_lesson" src="https://github.com/user-attachments/assets/76ee028f-938e-4c49-87b0-9636084928c2">
+
+
+---
+
+### **3. AI Voice Assistant Emotion Detection**
+
+Leverage the AI voice assistant’s ability to detect emotions during interactions. By understanding the user’s emotional state, AI Learner adapts its responses to provide a supportive and empathetic learning experience.
+<br>
+
+<img width="959" alt="ai_magVoice_assistant_detect_Emotion" src="https://github.com/user-attachments/assets/a6e1eca1-8738-4a6e-83ad-a3e686be7b86">
+
+
+---
+
+### **4. AI Voice Assistant for Learning**
+
+Experience hands-free learning with the AI voice assistant. It offers seamless voice-based navigation, personalized suggestions, and interactive support, ensuring a convenient and user-friendly educational journey.
+<br>
+
+<img width="959" alt="ai_magVoice_assistant" src="https://github.com/user-attachments/assets/bcbee17d-b7df-475a-b8c8-a3ace8dfede1">
+
+
+
+---
+
 ## ✨ **Key Features**  
 
 ### 🌐 **1. AI-Powered Learning**  
@@ -207,5 +249,40 @@ and [Swasthika Devadiga](https://github.com/SwasthikaDev).
 📫 **Contact**: Have questions? Drop an issue in the repo!  
 
 🌟 **Star this repo** if you find it helpful.  
+
+---
+
+## 📜 **License**
+
+This project is licensed under the [MIT License](https://www.notion.so/LICENSE).
+
+---
+
+### **MIT License**
+
+```
+MIT License
+
+Copyright (c) 2024 Vinayak Shinde
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
 
 ---
