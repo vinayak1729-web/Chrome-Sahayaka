@@ -254,7 +254,7 @@ and [Swasthika Devadiga](https://github.com/SwasthikaDev).
 
 ## 📜 **License**
 
-This project is licensed under the [MIT License](https://www.notion.so/LICENSE).
+This project is licensed under the MIT License.
 
 ---
 
